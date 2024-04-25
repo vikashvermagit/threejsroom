@@ -16,8 +16,9 @@ document.body.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-camera.position.set(5, 5, 11);
+
+const camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 1, 7000);
+camera.position.set(25, 15, 21);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
@@ -30,7 +31,7 @@ controls.autoRotate = false;
 controls.target = new THREE.Vector3(0, 1, 0);
 controls.update();
 
-const groundGeometry = new THREE.PlaneGeometry(20, 20, 32, 32);
+const groundGeometry = new THREE.PlaneGeometry(50, 20, 32, 32);
 groundGeometry.rotateX(-Math.PI / 2);
 const groundMaterial = new THREE.MeshStandardMaterial({
   color: 0x555555,
@@ -41,11 +42,11 @@ groundMesh.castShadow = false;
 groundMesh.receiveShadow = true;
 scene.add(groundMesh);
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 1); // White light with intensity 1
-directionalLight.position.set(5, 10, 5); // Adjust the position as needed
-directionalLight.castShadow = true;
-scene.add(directionalLight);
-
+const spotLight = new THREE.SpotLight(0xffffff, 5000, 100, 2.22, 0);
+spotLight.position.set(10, 25, 60);
+spotLight.castShadow = true;
+spotLight.shadow.bias = -0.00001;
+scene.add(spotLight);
 
 const loader = new GLTFLoader().setPath('public/low_poly_living_room/');
 loader.load('scene.gltf', (gltf) => {
@@ -59,8 +60,8 @@ loader.load('scene.gltf', (gltf) => {
     }
   });
 
-  mesh.position.set(10, 1.05, 1);
-  mesh.scale.set(0.02, 0.02, 0.02);
+  mesh.position.set(0, .005, 0);
+  mesh.scale.set(0.03, 0.03, 0.03);
  
   scene.add(mesh);
 

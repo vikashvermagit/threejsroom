@@ -7,7 +7,7 @@
   
   #heading {
     width: 100%;
-    padding: 32px;
+    padding: 22px;
   }
   
   .border {
@@ -18,13 +18,13 @@
   }
   
   h1 {
-    color: rgb(161, 44, 44);
-    font-size: 4em;
+    color: rgb(5, 5, 5);
+    font-size: 2em;
     margin: 0px;
-    font-weight: 100;
+    font-weight: 700;
   }
   h2{
-    color: rgb(161, 44, 44);
+    color: rgb(0, 0, 0);
     font-size: 2em;
     margin: 0px;
     font-weight: 100;
@@ -51,12 +51,12 @@
   .navbar{
     justify-content: space-between;
     display: flex;
-    padding: 20px;
-    background: rgb(255, 255, 255);
+    padding: 10px;
+    background: rgb(153, 116, 240);
    
   }
   .navbar ul{
-    
+    font-weight: bold;
     list-style: none;
     display: flex;
     gap: 20px;
