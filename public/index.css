@@ -1,0 +1,65 @@
+
+  
+  body {
+   
+    margin: 0;
+  }
+  
+  #heading {
+    width: 100%;
+    padding: 32px;
+  }
+  
+  .border {
+    background: linear-gradient(90deg, gray, 90%, rgb(0, 0, 0));
+    height: 2px;
+    width: 80vw;
+    margin-top: 4px;
+  }
+  
+  h1 {
+    color: rgb(161, 44, 44);
+    font-size: 4em;
+    margin: 0px;
+    font-weight: 100;
+  }
+  h2{
+    color: rgb(161, 44, 44);
+    font-size: 2em;
+    margin: 0px;
+    font-weight: 100;
+  }
+  h4{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  #progress-container {
+    position: fixed;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #progress {
+    font-size: 3em;
+    color: white;
+  }
+  
+  .navbar{
+    justify-content: space-between;
+    display: flex;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+   
+  }
+  .navbar ul{
+    
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  
